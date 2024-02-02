@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">
+		</div>
+		<center><h2 style="color:black;">PRODUCT Recommended</h2></center>
+		
+	</div>
+	</header>
+	<p style="color:red;font-size:20;text-align: center;"><b> The Recommended Product is </b></p>
+	<div class="results">
+
+
+		<center>
+	{% if prediction == 1%}
+     <h2> For MOBILE </h2>
+	 <img src='static\img\8.jpg' alt="Phone" width="500" height="400">
+	 <img src='static\img\9.jpg' alt="Phone" width="500" height="400">
+
+	
+	{% elif prediction == 2%}
+     <h2> For LAPTOP </h2>
+	 <img src='static\img\10.jpg' alt="Lap" width="500" height="400">
+	 <img src='static\img\11.jpg' alt="Lap" width="500" height="400">
+   
+	{% elif prediction == 3%}
+     <h2> For TV </h2>
+	 <img src='static\img\12.jpg' alt="Tv" width="500" height="400">
+	 
+	{% elif prediction == 4%}
+  
+     <h2> For KITCHEN </h2>
+	 <img src='static\img\12.jpg' alt="Tv" width="500" height="400">
+	
+	{% elif prediction == 5%}
+
+	
+  
+	{% endif %}
+	</center>
+
+	</div>
+
+</body>
+</html>
